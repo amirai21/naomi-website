@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Phone, Calendar, MapPin } from 'lucide-react';
+import dikurImage from '@/assets/dikur.jpg';
 
 export default function Hero() {
   return (
@@ -61,8 +62,8 @@ export default function Hero() {
           <div className="relative lg:order-1">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=700&fit=crop&crop=face"
-                alt="ד״ר נעמי קוביליאנסקי - דיקור רפואי ורפואת משפחה"
+                src={dikurImage}
+                alt="ד״ר נעמי קוביליאנסקי במהלך טיפול דיקור"
                 className="w-full h-[600px] object-cover"
               />
               
