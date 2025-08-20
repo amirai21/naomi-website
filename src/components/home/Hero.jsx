@@ -27,8 +27,8 @@ export default function Hero() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                טיפולי דיקור רפואי מקצועיים המשלבים רפואה מערבית ומזרחית. 
-                בניסיון רב שנים ברפואת משפחה ודיקור רפואי מוסמך.
+                טיפולי דיקור יבש מקצועיים על ידי רופאת משפחה מוסמכת. 
+                ניסיון רב שנים ברפואת משפחה ודיקור יבש מוסמך.
               </p>
             </div>
             
@@ -92,7 +92,7 @@ export default function Hero() {
             
             <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-lg p-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">1500+</div>
+                <div className="text-3xl font-bold text-green-600">500+</div>
                 <div className="text-gray-600 text-sm">טיפולים מוצלחים</div>
               </div>
             </div>

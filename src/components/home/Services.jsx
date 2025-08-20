@@ -76,21 +76,49 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
-            טיפולי דיקור רפואי
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
-            שירותי
-            <span className="block text-blue-600 font-medium">דיקור מקצועיים</span>
+        <div className="text-right mb-16">
+          <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6 text-center">
+            <span className="block text-blue-600 font-medium">דיקור יבש</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            טיפולי דיקור רפואי המשלבים בין חכמת הרפואה המזרחית העתיקה לבין הידע הרפואי המערבי המודרני, 
-            לטיפול מקיף ויעיל במגוון רחב של מצבים.
+            דיקור יבש, הידוע גם בשם דיקור מערבי, הוא טכניקת פיזיותרפיה הכוללת החדרת מחטים דקות לשרירים על מנת להקל על כאב, לשפר את טווח התנועה ולהפחית מתח שרירים. 
+            דיקור יבש אינו קשור לדיקור סיני, למרות השימוש במחטים, מכיוון שהוא מתמקד בעקרונות אנטומיים ופיזיולוגיים מערביים ולא במערכת האנרגיה הסינית.
+            <br/><br/>
+            <strong>מהו דיקור יבש?</strong>
+            <br/>
+            דיקור יבש הוא טכניקה חודרנית שבה מחטים דקות מוחדרות לתוך נקודות טריגר מיופציאליות (נקודות כאב בשרירים). נקודות טריגר אלו הן קשרים בשריר שעלולים לגרום לכאב מקומי או מוקרן. 
+            החדרת המחט יוצרת גירוי מקומי בשריר, מה שעוזר לשחרר את המתח והכאב.
+            <br/><br/>
+            <strong>כיצד פועל דיקור יבש?</strong>
+            <br/>
+            דיקור יבש פועל במספר מנגנונים:
+            <ul>
+              <li><strong>שחרור נקודות טריגר:</strong> המחט משחררת את המתח והכיווץ בנקודות הטריגר, ומאפשרת לשריר לנוע בחופשיות רבה יותר.</li>
+              <li><strong>שיפור זרימת דם:</strong> החדרת המחט מגרה את זרימת הדם לאזור הפגוע, לסייע לתהליך הריפוי.</li>
+              <li><strong>הפחתת כאב:</strong> הטיפול משחרר אנדורפינים, חומרים טבעיים בגוף המפחיתים כאב.</li>
+              <li><strong>שיפור תפקוד השרירים:</strong> הדיקור מסייע לשרירים להתארך ולהתכווץ באופן תקין, מה שמשפר את טווח התנועה ואת התפקוד הכללי.</li>
+            </ul>
+            <br/>
+            <strong>מטרות הטיפול:</strong>
+            <br/>
+            הקלה על כאבים כרוניים או אקוטיים, שיפור טווח התנועה של מפרקים ושרירים, הפחתת מתח שרירים והתכווצויות, טיפול בפציעות ספורט ופגיעות שרירים, שיקום לאחר פציעה.
+            <br/><br/>
+            <strong>מי מבצע דיקור יבש?</strong>
+            <br/>
+            דיקור יבש מבוצע על ידי פיזיותרפיסטים מוסמכים ורופאים מומחים, בעיקר בתחום האורתופדיה.
+            <br/><br/>
+            <strong>האם הטיפול בטוח?</strong>
+            <br/>
+            דיקור יבש נחשב בטוח כאשר מבוצע על ידי אנשי מקצוע מיומנים. תופעות לוואי אפשריות הן כאב קל או אי נוחות מקומית באזור הדיקור, אשר חולפים לרוב תוך זמן קצר.
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* New Title */}
+        <h3 className="text-3xl font-semibold text-blue-600 mb-12 text-center">
+          מקרים בהם דיקור יבש יכול לסייע
+        </h3>
+
+        {/* Services with Icons Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 group overflow-hidden">

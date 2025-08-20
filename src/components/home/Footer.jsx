@@ -47,8 +47,7 @@ export default function Footer() {
             </div>
             
             <p className="text-gray-300 leading-relaxed">
-              מספקת טיפולי דיקור רפואי מקצועיים המשלבים רפואה מערבית ומזרחית. 
-              הבריאות והרווחה שלכם הם בראש סדר העדיפויות שלנו.
+              מספקת טיפולי דיקור יבש מקצועיים על ידי רופאת משפחה מוסמכת.
             </p>
             
             <div className="flex space-x-4 space-x-reverse">
@@ -152,12 +151,6 @@ export default function Footer() {
             </div>
           </div>
           
-          <div className="mt-6 p-4 bg-gray-800 rounded-lg">
-            <p className="text-center text-gray-400 text-sm">
-              <strong className="text-yellow-400">חשוב:</strong> אתר זה מיועד למטרות מידע בלבד ואינו מהווה ייעוץ רפואי. 
-              תמיד היוועצו עם ספק שירותי בריאות מוסמך לגבי בעיות רפואיות. הטיפולים אינם מחליפים טיפול רפואי קונבנציונלי.
-            </p>
-          </div>
         </div>
       </div>
     </footer>

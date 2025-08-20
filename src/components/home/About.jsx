@@ -38,10 +38,12 @@ export default function About() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6">
             הכירו את
-            <span className="block text-green-600 font-medium">הרופאה המדקרת המומחית שלכם</span>
+            <span className="block text-green-600 font-medium">ד״ר נעמי קוביליאנסקי דברת</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            רופאת משפחה מוסמכת עם התמחות בדיקור רפואי, המשלבת בין רפואה מערבית מתקדמת לחכמת הרפואה המזרחית.
+            רופאת משפחה מוסמכת עם התמחות בדיקור יבש, המתמקד בטיפול בכאבים כרוניים ושיפור תפקוד השרירים. 
+            דיקור יבש הוא טכניקה מתקדמת המשתמשת במחטים דקות כדי לשחרר מתח בשרירים ולהקל על כאבים, 
+            תוך שיפור התנועה והגמישות.
           </p>
         </div>
 
