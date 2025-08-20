@@ -15,7 +15,7 @@ export default function Footer() {
     { name: 'אודות ד״ר קוביליאנסקי', href: '#about' },
     { name: 'טיפולי דיקור', href: '#services' },
     { name: 'צור קשר', href: '#contact' },
-    { name: 'קביעת תורים', href: '#' },
+    { name: 'קביעת תורים', href: '#calendar' },
     { name: 'מידע על טיפולים', href: '#' },
     { name: 'שאלות נפוצות', href: '#' }
   ];

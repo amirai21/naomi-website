@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { scroll_to_id } from '@/utils/scroll';
+import { call_phone } from '@/utils/phone';
 import { 
   Menu, 
   X, 
@@ -21,10 +23,7 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    scroll_to_id(sectionId);
     setIsMenuOpen(false);
   };
 
@@ -68,11 +67,11 @@ export default function Navigation() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4 space-x-reverse">
-            <Button variant="outline" className="border-blue-200 text-blue-700 hover:bg-blue-50">
+            <Button variant="outline" className="border-blue-200 text-blue-700 hover:bg-blue-50" onClick={() => call_phone('050-123-4567')}>
               <Phone className="w-4 h-4 ml-2" />
               050-123-4567
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white" onClick={() => scrollToSection('calendar')}>
               <Calendar className="w-4 h-4 ml-2" />
               קבעו תור
             </Button>
@@ -103,11 +102,11 @@ export default function Navigation() {
                 </button>
               ))}
               <div className="pt-4 space-y-3">
-                <Button variant="outline" className="w-full border-blue-200 text-blue-700 hover:bg-blue-50">
+                <Button variant="outline" className="w-full border-blue-200 text-blue-700 hover:bg-blue-50" onClick={() => call_phone('050-123-4567')}>
                   <Phone className="w-4 h-4 ml-2" />
                   צרו קשר
                 </Button>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" onClick={() => scrollToSection('calendar')}>
                   <Calendar className="w-4 h-4 ml-2" />
                   קבעו תור
                 </Button>

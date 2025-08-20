@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { 
   Zap, 
@@ -12,8 +12,11 @@ import {
   Moon,
   Smile
 } from 'lucide-react';
+import { Modal } from '@/components/ui/modal';
+import { CalendarWidget } from '@/components/ui/calendar_widget';
 
 export default function Services() {
+  const [is_calendar_open, set_is_calendar_open] = useState(false);
   const services = [
     {
       icon: Zap,
@@ -80,7 +83,7 @@ export default function Services() {
           <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6 text-center">
             <span className="block text-blue-600 font-medium">דיקור יבש</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             דיקור יבש, הידוע גם בשם דיקור מערבי, הוא טכניקת פיזיותרפיה הכוללת החדרת מחטים דקות לשרירים על מנת להקל על כאב, לשפר את טווח התנועה ולהפחית מתח שרירים. 
             דיקור יבש אינו קשור לדיקור סיני, למרות השימוש במחטים, מכיוון שהוא מתמקד בעקרונות אנטומיים ופיזיולוגיים מערביים ולא במערכת האנרגיה הסינית.
             <br/><br/>
@@ -110,7 +113,7 @@ export default function Services() {
             <strong>האם הטיפול בטוח?</strong>
             <br/>
             דיקור יבש נחשב בטוח כאשר מבוצע על ידי אנשי מקצוע מיומנים. תופעות לוואי אפשריות הן כאב קל או אי נוחות מקומית באזור הדיקור, אשר חולפים לרוב תוך זמן קצר.
-          </p>
+          </div>
         </div>
 
         {/* New Title */}
@@ -171,7 +174,7 @@ export default function Services() {
               קבעו תור להתייעצות ראשונית וגלו איך דיקור רפואי יכול לעזור לכם
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-colors duration-300">
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-colors duration-300" onClick={() => set_is_calendar_open(true)}>
                 <Clock className="w-5 h-5 ml-2 inline" />
                 קבעו תור
               </button>
@@ -181,6 +184,15 @@ export default function Services() {
             </div>
           </div>
         </div>
+        <Modal is_open={is_calendar_open} on_close={() => set_is_calendar_open(false)} title="בחרו תאריך לתור">
+          <CalendarWidget on_select={(date) => {
+            alert(`תאריך שנבחר: ${date.toLocaleDateString('he-IL')}`);
+            set_is_calendar_open(false);
+          }} />
+          <div className="mt-6 text-left">
+            <button onClick={() => set_is_calendar_open(false)} className="px-4 py-2 rounded-md border">סגירה</button>
+          </div>
+        </Modal>
       </div>
     </section>
   );

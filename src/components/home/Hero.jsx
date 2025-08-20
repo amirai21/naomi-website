@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { scroll_to_id } from '@/utils/scroll';
+import { call_phone } from '@/utils/phone';
 import { Phone, Calendar, MapPin } from 'lucide-react';
 import dikurImage from '@/assets/dry_needling.jpg';
 
@@ -33,12 +35,12 @@ export default function Hero() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => scroll_to_id('calendar')}>
                 <Calendar className="w-5 h-5 ml-3" />
                 קבעו תור
               </Button>
               
-              <Button variant="outline" className="border-blue-200 text-blue-700 hover:bg-blue-50 px-8 py-6 text-lg rounded-xl transition-all duration-300">
+              <Button variant="outline" className="border-blue-200 text-blue-700 hover:bg-blue-50 px-8 py-6 text-lg rounded-xl transition-all duration-300" onClick={() => call_phone('050-123-4567')}>
                 <Phone className="w-5 h-5 ml-3" />
                 צרו קשר היום
               </Button>

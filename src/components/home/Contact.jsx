@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { call_phone } from '@/utils/phone';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Modal } from '@/components/ui/modal';
+import { CalendarWidget } from '@/components/ui/calendar_widget';
 import { 
   Phone, 
   Mail, 
@@ -13,6 +16,7 @@ import {
 } from 'lucide-react';
 
 export default function Contact() {
+  const [is_calendar_open, set_is_calendar_open] = useState(false);
   const contactInfo = [
     {
       icon: Phone,
@@ -120,7 +124,7 @@ export default function Contact() {
             </Card>
 
             {/* Schedule Appointment CTA */}
-            <Card className="p-8 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+            <Card id="calendar" className="p-8 bg-gradient-to-r from-blue-600 to-green-600 text-white">
               <div className="text-center space-y-6">
                 <Calendar className="w-16 h-16 mx-auto opacity-80" />
                 <div>
@@ -129,10 +133,10 @@ export default function Contact() {
                     קבעו תור להתייעצות ראשונית ונתחיל במסע לבריאות טבעית
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
-                  קביעת תור מקוונת
-                    </Button>
-                    <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
+                    <button onClick={() => set_is_calendar_open(true)} className="inline-flex items-center justify-center rounded-md border px-8 py-3 text-sm font-medium border-white text-white hover:bg-white hover:text-blue-600">
+                      קביעת תור מקוונת
+                    </button>
+                    <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3" onClick={() => call_phone('050-123-4567')}>
                       התקשרו לקביעת תור
                     </Button>
                   </div>
@@ -188,6 +192,15 @@ export default function Contact() {
             </Card>
           </div>
         </div>
+        <Modal is_open={is_calendar_open} on_close={() => set_is_calendar_open(false)} title="בחרו תאריך לתור">
+          <CalendarWidget on_select={(date) => {
+            alert(`תאריך שנבחר: ${date.toLocaleDateString('he-IL')}`);
+            set_is_calendar_open(false);
+          }} />
+          <div className="mt-6 text-left">
+            <button onClick={() => set_is_calendar_open(false)} className="px-4 py-2 rounded-md border">סגירה</button>
+          </div>
+        </Modal>
       </div>
     </section>
   );
