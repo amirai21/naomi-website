@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Phone, Calendar, MapPin } from 'lucide-react';
-import dikurImage from '@/assets/dikur.jpg';
+import dikurImage from '@/assets/dry_needling.jpg';
 
 export default function Hero() {
   return (
