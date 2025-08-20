@@ -129,8 +129,8 @@ export default function Contact() {
                     קבעו תור להתייעצות ראשונית ונתחיל במסע לבריאות טבעית
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3">
-                      קביעת תור מקוונת
+                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
+                  קביעת תור מקוונת
                     </Button>
                     <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
                       התקשרו לקביעת תור

@@ -73,7 +73,7 @@ export default function Hero() {
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
                     <span className="text-2xl">🌿</span>
                   </div>
-                  <div className="text-right">
+                  <div className="text-right max-w-sm">
                     <h3 className="text-xl font-semibold text-gray-900">ד״ר נעמי קוביליאנסקי</h3>
                     <p className="text-blue-600 font-medium">דיקור רפואי ורפואת משפחה</p>
                     <p className="text-gray-600 text-sm">רופאה מוסמכת עם התמחות בדיקור</p>
